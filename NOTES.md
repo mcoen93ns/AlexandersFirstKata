@@ -1,5 +1,4 @@
 //TODO
-- retrieve dockeruser name / password from env variables ✅
--  set docker username/password in GIT ✅
--  Make a snyk project?
--  Add Dockerfile to the cookie cutter ⚡
+- Are all days of the week defined?
+- Test if all days of the week are present in the array
+- 
