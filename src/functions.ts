@@ -5,6 +5,6 @@ export function sumArray(input: number[]) {
   }
   return counter;
 }
-export function sumArray(input: number) {
-  return 
+export function calculateStepsOver20Years(input: number) {
+  return input * 20;
 }

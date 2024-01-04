@@ -1,4 +1,4 @@
-import { sumArray } from "../../src/functions";
+import { sumArray, calculateStepsOver20Years } from "../../src/functions";
 
 describe("I have a list with a fixed amount of numbers and I want the sum of all the numbers in the list", () => {
   it("1, 2 and 3 add up to 6", () => {
@@ -49,19 +49,18 @@ describe("I have a list with a fixed amount of numbers and I want the sum of all
     expect(sumArray(saturday)).toEqual(output);
   });
 
-  describe("After counting all the steps for each day, I want to count the outcomes of each day", () => {
-    it("Count the results of all the days. The result is the amount of steps Suzuki takes in a year", () => {
+  describe("Now that we can sum the number of steps for a given day, we need to calculate the total for a year", () => {
+    it("When the data for a year looks like this: 6, 10, 15, 21, 28, 36, 45, the total is 161", () => {
       const year = [6, 10, 15, 21, 28, 36, 45];
       const output = 161;
       expect(sumArray(year)).toEqual(output);
     });
-
-    it("Count the results of all the days. The result is the amount of steps Suzuki takes in 20 years", () => {
-      const year = 161;
-      const expectedStepsOverTwentyYears = year * 20;
+  });
+  describe("Next step: forecast the number of steps taken in 20 years by multiplying the year total by 20", () => {
+    it("When the total number of steps in a year is 161, the total number of steps in 20 years is 3220", () => {
+      const sumOfStepsForAYear = 161;
       const output = 3220;
-      expect(sumArray(expectedStepsOverTwentyYears)).toEqual(output);
+      expect(calculateStepsOver20Years(sumOfStepsForAYear)).toEqual(output);
     });
   });
-
 });
